@@ -11,20 +11,51 @@
 <main>
 <p><a href="index.html">← GestureClay 手势飞碟</a></p>
 <h1>隐私政策</h1>
-<p class="date">生效日期：2026 年 10 月 30 日</p>
-<p>GestureClay 手势飞碟不创建账户，不收集、传输、出售或共享任何个人数据。App 不包含广告、分析、追踪、第三方 SDK 或任何网络请求。</p>
-<p><b>摄像头。</b>App 使用 iPad 的前置原深感摄像头识别手势和手部动作。摄像头画面和深度数据只在设备上实时处理，用完即丢弃，不会被录制、保存或上传。</p>
-<p><b>本地数据。</b>关卡进度、星级、手势灵敏度校准和设置保存在你的设备上，只用于提供游戏功能。删除 App 即可清除这些数据。开发者选项中的数据记录功能只有在你手动开启时才会在本机保存统计数字，不会上传。</p>
-<p><b>儿童。</b>App 不收集任何人的个人信息，包括儿童。</p>
+<p class="date">更新日期：2026 年 11 月 16 日</p>
+<p>GestureClay 手势飞碟无需账号，无广告、分析或追踪功能。</p>
+
+<h2 id="camera-face-zh">摄像头与面部数据</h2>
+<p>授予摄像头权限后，手势模式在设备上实时处理前置摄像头画面。有原深感摄像头时，App 也会使用深度数据跟踪手部动作。App 不检测、识别或验证人脸，也不提取面部关键点、面部模板或人脸生物识别标识。人脸可能出现在前置摄像头画面中。原始摄像头画面和完整深度图只在设备内存中临时处理，App 不会将它们写入文件或传输。可选的引导录制会保存下述低分辨率深度网格。</p>
+
+<h2 id="diagnostics-zh">可选诊断记录</h2>
+<p>开发者选项内提供两项由用户手动启动的功能，用于排查手势跟踪问题。</p>
+<ul>
+<li><b>引导录制。</b>完成录制或选择「结束并保存」后，App 在其设备本地的 Documents/Collections 目录保存 JSONL 文件。文件可包含逐帧手部关节坐标和置信度、关节深度、时间和游戏诊断数据。记录头包含 App 版本及构建号、设备型号、开始时间、所选手和深度状态。在有原深感数据时，录制还会保存覆盖摄像头整个深度取景范围的 40 × 30 网格。如果人脸在取景范围内，其中的深度样本可能反映粗略的面部轮廓。文件不包含彩色图像、视频、完整深度图或人脸识别结果。</li>
+<li><b>10 秒运行检查。</b>选择「保存数值记录」后，App 在其设备本地的 Documents/Diagnostics 目录保存一份 JSON 文件，可包含逐帧手部关节坐标、置信度、时间以及跟踪和游戏诊断数据。该记录不包含摄像头画面或深度网格。你可以用系统分享界面自行导出该文件。</li>
+</ul>
+
+<h2 id="retention-sharing-zh">保存、删除与分享</h2>
+<p>诊断文件保存在设备上的 App 沙盒内。GestureClay 不会自动上传诊断文件，开发者不会自动收到文件。运行检查的导出副本由你选择接收者或保存位置。设备开启系统备份时，本地诊断文件可能随 iPadOS 备份保存，包括 iCloud 备份。</p>
+<p>引导录制没有按天计算的保存期限。每次成功保存时，App 保留最新五份录制并清理更早的文件。下一次保存运行检查时会覆盖上一份。删除 App 可清除设备上 App 沙盒里的记录。你可以另行管理已导出的副本和设备备份。</p>
+
+<h2 id="game-data-zh">游戏数据</h2>
+<p>关卡进度、分数、星级、手势校准、设置和试打计数保存在设备上，用于游戏功能和排查问题。删除 App 可清除这些设备本地数据。</p>
 <p>如对本政策有疑问，请通过 <a href="index.html">支持页面</a> 联系我们。</p>
 
 <hr>
+<section lang="en">
 <h2>Privacy Policy</h2>
-<p class="date">Effective date: October 30, 2026</p>
-<p>GestureClay does not create accounts and does not collect, transmit, sell or share personal data. It contains no advertising, analytics, tracking, third-party SDKs or network requests.</p>
-<p><b>Camera.</b> The app uses the iPad's front TrueDepth camera to recognize your hand gestures. Camera frames and depth data are processed on device in real time and discarded; they are never recorded, stored or uploaded.</p>
-<p><b>Local data.</b> Stage progress, stars, gesture calibration and settings are stored only on your device to provide the game. Deleting the app removes them. The developer-mode recording feature stores aggregate numbers on device only, and only when you turn it on.</p>
+<p class="date">Updated November 16, 2026</p>
+<p>GestureClay requires no account and contains no ads, analytics, or tracking.</p>
+
+<h3 id="camera-face">Camera and Face Data</h3>
+<p>With camera permission, gesture mode processes front-camera images on the iPad in real time. On devices with a TrueDepth camera, the app also uses depth readings to track hand movement. GestureClay does not detect, identify, or authenticate faces, and does not extract facial landmarks, face templates, or biometric face identifiers. A face can be incidentally visible in front-camera images. Raw camera images and full-resolution depth maps are processed temporarily in device memory. The app does not write them to files or transmit them. The optional guided recording saves the low-resolution depth grid described below.</p>
+
+<h3 id="diagnostics">Optional Diagnostic Recordings</h3>
+<p>Developer options contain two tools that you start manually to troubleshoot gesture tracking.</p>
+<ul>
+<li><b>Guided recording.</b> When the recording completes or you choose to end and save it, GestureClay writes a JSONL file to its Documents/Collections folder on the device. The file can contain per-frame hand-joint positions and confidence scores, joint depth, timing, and gameplay diagnostics. The file header includes the app version and build, device model, start time, selected hand, and depth status. When TrueDepth data is available, guided recording saves a 40 × 30 depth grid covering the camera's depth field of view. If a face is in view, the grid can contain coarse depth readings of that face. The file contains no color images, video, full-resolution depth maps, or face recognition results.</li>
+<li><b>10-second runtime check.</b> When you choose to save the check, GestureClay writes a JSON file to its Documents/Diagnostics folder on the device. The file can contain per-frame hand-joint positions and confidence scores, timing, and tracking and gameplay diagnostics. It contains no camera images or depth grids. You can export this file using the iPadOS share sheet.</li>
+</ul>
+
+<h3 id="retention-sharing">Storage, Deletion, and Sharing</h3>
+<p>GestureClay stores diagnostic files in its app sandbox on the device. The app does not upload the files automatically, and the developer does not automatically receive them. If you export a runtime check, you choose the recipient or destination. Diagnostic files may be included in iPadOS device backups, including iCloud Backup, depending on your device settings.</p>
+<p>Guided recordings have no time-based expiration. On each successful save, the app keeps the five newest guided recordings and removes older ones. A newly saved runtime check replaces the previous saved check. Deleting the app removes its local files. You can manage exported copies and device backups separately.</p>
+
+<h3 id="game-data">Game Data</h3>
+<p>Stage progress, scores, stars, gesture calibration, settings, and practice counters are stored on the device to support gameplay and troubleshooting. Deleting the app removes this local data.</p>
 <p>Questions about this policy can be sent through the <a href="index.html">support page</a>.</p>
+</section>
 </main>
 </body>
 </html>
